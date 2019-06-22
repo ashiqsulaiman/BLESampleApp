@@ -14,6 +14,7 @@
 		5B9E3D2E22BE00C000FBDAF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E3D2C22BE00C000FBDAF8 /* LaunchScreen.storyboard */; };
 		5B9E3D3922BE00C100FBDAF8 /* BLESampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E3D3822BE00C100FBDAF8 /* BLESampleAppTests.swift */; };
 		5B9E3D4422BE00C100FBDAF8 /* BLESampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E3D4322BE00C100FBDAF8 /* BLESampleAppUITests.swift */; };
+		5B9E3D5322BE084D00FBDAF8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E3D5222BE084D00FBDAF8 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5B9E3D3F22BE00C100FBDAF8 /* BLESampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLESampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9E3D4322BE00C100FBDAF8 /* BLESampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESampleAppUITests.swift; sourceTree = "<group>"; };
 		5B9E3D4522BE00C100FBDAF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B9E3D5222BE084D00FBDAF8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9E3D5322BE084D00FBDAF8 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				5B9E3D3722BE00C100FBDAF8 /* BLESampleAppTests */,
 				5B9E3D4222BE00C100FBDAF8 /* BLESampleAppUITests */,
 				5B9E3D2122BE00BF00FBDAF8 /* Products */,
+				5B9E3D5122BE084D00FBDAF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				5B9E3D4522BE00C100FBDAF8 /* Info.plist */,
 			);
 			path = BLESampleAppUITests;
+			sourceTree = "<group>";
+		};
+		5B9E3D5122BE084D00FBDAF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B9E3D5222BE084D00FBDAF8 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
