@@ -18,6 +18,7 @@
 		5BA1627C22C091AB00426933 /* PeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA1627B22C091AB00426933 /* PeripheralDelegate.swift */; };
 		5BA1627E22C0925E00426933 /* DevicesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA1627D22C0925E00426933 /* DevicesTableViewDelegate.swift */; };
 		5BA1628E22C0D37500426933 /* RCTMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA1628D22C0D37500426933 /* RCTMainViewController.swift */; };
+		5BBB16BF22C0FA2F007E259F /* RNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB16BE22C0FA2F007E259F /* RNBridge.m */; };
 		BA33BD286F38A03043421510 /* Pods_BLESampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD347434DB3C44594D2E31C /* Pods_BLESampleApp.framework */; };
 		C0AC3CB104C39358C2A40F02 /* Pods_BLESampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F28A52CA8E0856441A5F619 /* Pods_BLESampleAppUITests.framework */; };
 		EB16B5EE3C4043D8DB39B21A /* Pods_BLESampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EEF1DEE13D20E53DA86DA3 /* Pods_BLESampleAppTests.framework */; };
@@ -63,6 +64,9 @@
 		5BA1627B22C091AB00426933 /* PeripheralDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralDelegate.swift; sourceTree = "<group>"; };
 		5BA1627D22C0925E00426933 /* DevicesTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewDelegate.swift; sourceTree = "<group>"; };
 		5BA1628D22C0D37500426933 /* RCTMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTMainViewController.swift; sourceTree = "<group>"; };
+		5BBB16BD22C0FA2E007E259F /* BLESampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLESampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		5BBB16BE22C0FA2F007E259F /* RNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBridge.m; sourceTree = "<group>"; };
+		5BBB16C022C0FA38007E259F /* RNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBridge.h; sourceTree = "<group>"; };
 		5BD347434DB3C44594D2E31C /* Pods_BLESampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLESampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77902EEF14601D9D6EA233BF /* Pods-BLESampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLESampleApp/Pods-BLESampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C1EEF1DEE13D20E53DA86DA3 /* Pods_BLESampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLESampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +149,8 @@
 				5B9E3D2C22BE00C000FBDAF8 /* LaunchScreen.storyboard */,
 				5B9E3D2F22BE00C000FBDAF8 /* Info.plist */,
 				5BA1628D22C0D37500426933 /* RCTMainViewController.swift */,
+				5BBB16BD22C0FA2E007E259F /* BLESampleApp-Bridging-Header.h */,
+				5BBB16C122C0FA3E007E259F /* RNBridge */,
 			);
 			path = BLESampleApp;
 			sourceTree = "<group>";
@@ -178,6 +184,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5BBB16C122C0FA3E007E259F /* RNBridge */ = {
+			isa = PBXGroup;
+			children = (
+				5BBB16BE22C0FA2F007E259F /* RNBridge.m */,
+				5BBB16C022C0FA38007E259F /* RNBridge.h */,
+			);
+			path = RNBridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +204,7 @@
 				5B9E3D1C22BE00BF00FBDAF8 /* Sources */,
 				5B9E3D1D22BE00BF00FBDAF8 /* Frameworks */,
 				5B9E3D1E22BE00BF00FBDAF8 /* Resources */,
+				AEEB742202C6C63487364F22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +265,7 @@
 				TargetAttributes = {
 					5B9E3D1F22BE00BF00FBDAF8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					5B9E3D3322BE00C100FBDAF8 = {
 						CreatedOnToolsVersion = 10.1;
@@ -352,6 +369,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AEEB742202C6C63487364F22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BLESampleApp/Pods-BLESampleApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLESampleApp/Pods-BLESampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C291FD85B5F851D420B2CF7C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBB16BF22C0FA2F007E259F /* RNBridge.m in Sources */,
 				5BA1627C22C091AB00426933 /* PeripheralDelegate.swift in Sources */,
 				5B9E3D2622BE00BF00FBDAF8 /* ViewController.swift in Sources */,
 				5BA1627E22C0925E00426933 /* DevicesTableViewDelegate.swift in Sources */,
@@ -560,7 +608,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77902EEF14601D9D6EA233BF /* Pods-BLESampleApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E3JNAB32PR;
 				INFOPLIST_FILE = BLESampleApp/Info.plist;
@@ -570,6 +620,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ashiq.BLESampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BLESampleApp/BLESampleApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -579,7 +631,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A8025A73E97FE42F083120A /* Pods-BLESampleApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E3JNAB32PR;
 				INFOPLIST_FILE = BLESampleApp/Info.plist;
@@ -589,6 +643,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ashiq.BLESampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BLESampleApp/BLESampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

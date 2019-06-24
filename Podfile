@@ -7,7 +7,7 @@ target 'BLESampleApp' do
 
 # Your 'node_modules' directory is probably in the root of your project,
 # but if not, adjust the `:path` accordingly
-=begin
+
     pod 'React', :path => './node_modules/react-native', :subspecs => [
     'Core',
     'CxxBridge', # Include this for RN >= 0.47
@@ -25,7 +25,7 @@ pod 'yoga', :path => './node_modules/react-native/ReactCommon/yoga'
 pod 'DoubleConversion', :podspec => './node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
 pod 'glog', :podspec => './node_modules/react-native/third-party-podspecs/glog.podspec'
 pod 'Folly', :podspec => './node_modules/react-native/third-party-podspecs/Folly.podspec'
-=end
+
   # Pods for BLESampleApp
 
   target 'BLESampleAppTests' do

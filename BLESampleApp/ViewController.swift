@@ -9,7 +9,7 @@
 import UIKit
 import CoreBluetooth
 
-class ViewController: UIViewController, CBCentralManagerDelegate {
+@objc class ViewController: UIViewController, CBCentralManagerDelegate {
    
     @IBOutlet weak var devicesTableView: UITableView!
     var manager: CBCentralManager? = nil
