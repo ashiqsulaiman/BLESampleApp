@@ -1,0 +1,13 @@
+{
+  "name": "BLERNAPP",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "yarn react-native start"
+  },
+  "dependencies": {
+    "glog": "^1.7.0",
+    "react": "16.8.3",
+    "react-native": "^0.59.9"
+  }
+}

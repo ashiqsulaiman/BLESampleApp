@@ -10,6 +10,8 @@ import UIKit
 import CoreBluetooth
 
 extension ViewController: CBPeripheralDelegate {
+    
+    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         guard let services = peripheral.services else {return}
         for service in services {
@@ -32,7 +34,9 @@ extension ViewController: CBPeripheralDelegate {
             if characteristic.properties.contains(.notify) {
                 print("\(characteristic.uuid): properties contains .notify")
             }
-            
+            if characteristic.properties.contains(.write){
+                print("\(characteristic.uuid): properties contains .write")
+            }
         }
     }
     

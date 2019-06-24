@@ -22,8 +22,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate {
     var mainCharacteristic: CBCharacteristic? = nil
     var services: [CBUUID] = []
     
-    //        let BLEService = "DFB0"
-    //        let BLECharacteristic = "DFB1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
