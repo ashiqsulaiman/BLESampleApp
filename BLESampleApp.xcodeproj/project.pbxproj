@@ -19,6 +19,7 @@
 		5BA1627E22C0925E00426933 /* DevicesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA1627D22C0925E00426933 /* DevicesTableViewDelegate.swift */; };
 		5BA1628E22C0D37500426933 /* RCTMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA1628D22C0D37500426933 /* RCTMainViewController.swift */; };
 		5BBB16BF22C0FA2F007E259F /* RNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB16BE22C0FA2F007E259F /* RNBridge.m */; };
+		5BBB16C322C1E841007E259F /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BBB16C222C1E841007E259F /* main.jsbundle */; };
 		BA33BD286F38A03043421510 /* Pods_BLESampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD347434DB3C44594D2E31C /* Pods_BLESampleApp.framework */; };
 		C0AC3CB104C39358C2A40F02 /* Pods_BLESampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F28A52CA8E0856441A5F619 /* Pods_BLESampleAppUITests.framework */; };
 		EB16B5EE3C4043D8DB39B21A /* Pods_BLESampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EEF1DEE13D20E53DA86DA3 /* Pods_BLESampleAppTests.framework */; };
@@ -67,6 +68,7 @@
 		5BBB16BD22C0FA2E007E259F /* BLESampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLESampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		5BBB16BE22C0FA2F007E259F /* RNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBridge.m; sourceTree = "<group>"; };
 		5BBB16C022C0FA38007E259F /* RNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBridge.h; sourceTree = "<group>"; };
+		5BBB16C222C1E841007E259F /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		5BD347434DB3C44594D2E31C /* Pods_BLESampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLESampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77902EEF14601D9D6EA233BF /* Pods-BLESampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLESampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLESampleApp/Pods-BLESampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C1EEF1DEE13D20E53DA86DA3 /* Pods_BLESampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLESampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 		5B9E3D1722BE00BF00FBDAF8 = {
 			isa = PBXGroup;
 			children = (
+				5BBB16C222C1E841007E259F /* main.jsbundle */,
 				5B9E3D2222BE00BF00FBDAF8 /* BLESampleApp */,
 				5B9E3D3722BE00C100FBDAF8 /* BLESampleAppTests */,
 				5B9E3D4222BE00C100FBDAF8 /* BLESampleAppUITests */,
@@ -305,6 +308,7 @@
 				5B9E3D2E22BE00C000FBDAF8 /* LaunchScreen.storyboard in Resources */,
 				5B9E3D2B22BE00C000FBDAF8 /* Assets.xcassets in Resources */,
 				5B9E3D2922BE00BF00FBDAF8 /* Main.storyboard in Resources */,
+				5BBB16C322C1E841007E259F /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

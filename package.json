@@ -6,6 +6,7 @@
     "start": "yarn react-native start"
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.5",
     "glog": "^1.7.0",
     "react": "16.8.3",
     "react-native": "^0.59.9"

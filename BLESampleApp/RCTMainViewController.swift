@@ -13,7 +13,7 @@ class RCTMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
+        let jsCodeLocation = RCTBundleURLProvider.sharedSettings()?.jsBundleURL(forBundleRoot: "main.jsbundle", fallbackResource: "")
         let rootView: RCTRootView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "BLERN", initialProperties: [:], launchOptions: [:])
         self.view = rootView
     }
